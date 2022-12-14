@@ -6,6 +6,7 @@ win_lose =  [('Scissors', 'Paper'),
                     ('Lizard', 'Spock'),
                     ('Spock', 'Scissors'),
                     ('Scissors', 'Lizard'),
+                
                     ('Lizard', 'Paper'),
                     ('Paper', 'Spock'),
                     ('Spock', 'Rock'),
