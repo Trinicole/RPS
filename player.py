@@ -1,8 +1,10 @@
-
-print ("How Many Players?")
-print ('Enter 1 for single player\n')
-print ('Enter 2 for multiplayer\n')
-print ('Enter 3 for a surprise!\n')
-user_input = int(input("Enter Player Mode"))
-
-
+class Player:
+    def __init__(self, name):
+        self.name = name 
+        self.score = 0
+        self.gesture_list = ["Rock", "Paper", "Scissors", "Paper", "Lizard", "Spock"]
+        self.current_gesture = ""
+        pass
+    def choose_gesture(self): 
+        pass
+ 

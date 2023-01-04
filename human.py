@@ -1,18 +1,20 @@
-def Choose_Option():
-    choices = ['rock', 'paper','scissors','lizard', 'spock']
-print ('Enter 0 for rock\n' )
-print ('Enter 1 for paper\n')
-print ('Enter 2 for scissors\n')
-print ('Enter 3 for lizard\n')
-print ('Enter 4 for spock\n')
-choice = int(input('Enter your choice:'))
-if (choice == 0):
-    print ("rock")  
-if (choice == 1):
-    print ("paper")
-if (choice == 2):
-    print ("scissors")
-if (choice == 3):
-    print ("lizard")
-if (choice == 4):
-    print ("spock")
+from player import Player
+import interface as ui
+
+class Human(Player):
+    def __init__(self, name):
+        super().__init__(name)
+    pass
+    def choose_gesture(self):
+        
+        user_selection = ui.validate_to_int(f"""
+        Choose from one of the options below: 
+        1 for {self.gesture_list[0]}
+        2 for {self.gesture_list[1]}
+        3 for {self.gesture_list[2]}
+        4 for {self.gesture_list[3]}
+        5 for {self.gesture_list[4]}
+        """)
+        self.current_gesture = self.gesture_list[user_selection-1]
+        print(f"{self.name} chose {self.current_gesture}!")
+        pass
